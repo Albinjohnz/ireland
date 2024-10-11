@@ -1,3 +1,4 @@
+alert("basket.js")
 let basket=(a,b) => {
     let total=0;
     for(let fruits in a){
