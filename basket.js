@@ -10,4 +10,4 @@ return total;
 a={papaya:10, peach:2};
 b={papaya:5,peach:4};
 let total=basket(a,b);
-alert(total);
+alert("total cost of basket is ="+total);
