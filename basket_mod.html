@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script>
+        let basket = (quantity, price) => {
+            let cost = 0;
+            for (let item in quantity) {
+                if (price[item] !== undefined) {
+                    cost += quantity[item] * price[item];
+                }
+            }
+            return cost;
+        };
+
+        let fruits = {};
+        let quantities = {};
+        let prices = {};
+
+        let userInput = () => {
+            let fruit = prompt("Enter the name of the fruit:");
+            let quantity = parseFloat(prompt(`Enter the quantity of ${fruit}:`));
+            let price = parseFloat(prompt(`Enter the price of ${fruit}:`));
+
+            quantities[fruit] = quantity;
+            prices[fruit] = price;
+
+            alert("Total is: " + basket(quantities, prices));
+        };
+
+        userInput();
+    </script>
+</head>
+</html>
