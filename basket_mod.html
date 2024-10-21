@@ -11,17 +11,19 @@
             return cost;
         };
 
-        let fruits = {};
         let quantities = {};
         let prices = {};
 
         let userInput = () => {
-            let fruit = prompt("Enter the name of the fruit:");
-            let quantity = parseFloat(prompt(`Enter the quantity of ${fruit}:`));
-            let price = parseFloat(prompt(`Enter the price of ${fruit}:`));
+            let appleQuantity = parseFloat(prompt("Enter the quantity of apples:"));
+            let applePrice = parseFloat(prompt("Enter the price of apples:"));
+            quantities["apples"] = appleQuantity;
+            prices["apples"] = applePrice;
 
-            quantities[fruit] = quantity;
-            prices[fruit] = price;
+            let orangeQuantity = parseFloat(prompt("Enter the quantity of oranges:"));
+            let orangePrice = parseFloat(prompt("Enter the price of oranges:"));
+            quantities["oranges"] = orangeQuantity;
+            prices["oranges"] = orangePrice;
 
             alert("Total is: " + basket(quantities, prices));
         };
